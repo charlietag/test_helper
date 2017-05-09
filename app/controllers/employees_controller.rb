@@ -4,4 +4,8 @@ class EmployeesController < ApplicationController
 
   def edit
   end
+
+  def search
+    @my_val = params[:q]
+  end
 end

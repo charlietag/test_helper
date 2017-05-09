@@ -1,2 +1,18 @@
 <h1>Employees#edit</h1>
-<p>Find me in app/views/employees/edit.html.erb</p>
+
+<%= form_tag("/employees/search", method: "post") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+
+  <p></p>
+  <hr>
+
+  <%= check_box_tag(:pet_dog, "1", true) %>
+  <%= label_tag(:pet_dog, "I own a dog.") %>
+  <%= check_box_tag(:pet_cat) %>
+  <%= label_tag(:pet_cat, "I own a cat.") %>
+
+  <p></p>
+  <hr>
+  <%= submit_tag "Search" %>
+<% end %>
