@@ -2,7 +2,7 @@
 
 <%= form_tag("/employees/search", method: "post") do %>
   <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
+  <%= text_field_tag("employee[name]") %>
 
   <p></p>
   <hr>
